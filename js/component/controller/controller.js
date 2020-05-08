@@ -26,6 +26,7 @@ define(() => {
             this.elem.score_player = document.querySelector('.info__score_player');
 
             this.elem.table.forEach((cell) => {
+                this.elem.infoHod.innerHTML = 'Ваш ход!';
                 cell.addEventListener('click', () => {
                     this.elem.infoHod.innerHTML = 'Компьютер думает!';
                     if (cell.innerHTML == '') {
