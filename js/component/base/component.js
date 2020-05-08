@@ -1,10 +1,21 @@
+// Самый главный компонент - родитель
 define(() => {
     class Component {
-        constructor() {}
+
+        constructor() {
+
+        }
+
         toString() {
             return this.render();
         }
-        render() {}
+
+        render() {
+
+        }
+
     }
+
     return Component;
+    
 });
