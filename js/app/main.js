@@ -1,6 +1,6 @@
 'use strict';
 
-require(['component/startPage/startPage', 'component/gamePage/gamePage'], (Start, Game) => {
+require(['component/startPage/startPage', 'component/gamePage/gamePage','component/controller/controller'], (Start, Game, Controller) => {
     let queryString = window.location.search;
     let urlParams = new URLSearchParams(queryString);
     if(!urlParams.has('name')){
@@ -10,8 +10,7 @@ require(['component/startPage/startPage', 'component/gamePage/gamePage'], (Start
     } else {
         let game = new Game();
         document.body.innerHTML = game;
+        Controller.init();
         game.afterRender();
     }
 });
-
-let arr = [], arr_X = [], arr_O = [], v = 0;
